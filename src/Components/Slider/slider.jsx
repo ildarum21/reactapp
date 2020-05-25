@@ -3,7 +3,7 @@
   const Slider =(props)=> {
       return(
           <div className="slider">
-              {props.Images}
+              {props.Image}
           </div>
       );
   }

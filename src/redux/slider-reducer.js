@@ -1,12 +1,28 @@
-
   import ReduxImage from '../api/ImagesAPI.js';
 
   const TOGGLE_LOCAL_MODE='TOGGLE_LOCAL_MODE';
-  let InitialState ={
-      
-    ReduxImage,
+  
+  let InitialState ={     
+      ReduxImage,
       tuggleMode:false
   }
-  const SliderReduser=(state=InitialState,action)=>{
+  export const SliderReduser=(state=InitialState,action)=>{
+      switch (action.type){
+          case TOGGLE_LOCAL_MODE:{
+            return{
+                ...state.tuggleMode=true?false:true
+            } 
+          }
+          default:
+              return state
+      }
   }
-  export default SliderReduser;
+  export const toggleLocalMode =()=>{
+    return{
+        type:TOGGLE_LOCAL_MODE
+    }
+
+  }
+
+
+  

@@ -14,8 +14,10 @@
     width: 60%;
     align-items: center;
 }
-.nav__item{
+.nav__item {
+    display: block;
     text-decoration: none;
     margin-left: 30px;
     color:orange;
 }
+

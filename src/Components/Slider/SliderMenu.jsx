@@ -6,32 +6,41 @@
 
 
   let Images =LocalImages.map(item=><img alt='slider' src={item} className='slide'/>);
-  const SliderMenu =(props)=>{
-      console.log(props);
-      return(
-          <div className='sliderMenu'>
-               <h1>Slider</h1>
-                <Slider Images={Images} />
-                <a href="#"     onClick={()=>PrevSlide()}>left</a>   
-                <a href="#" onClick={()=>NextSlide()}>right</a> 
-             <div className="switch">
-                <input type="checkbox"/>
-            </div>
-          </div>
-      );
-  }
+
   let ActiveSlide =0;
   let LastSlide = 0;
   let images;
   let slider;
-  window.onload=function(){
-      slider=document.querySelector('.slider');
 
+
+  class SliderMenu extends React.Component{
+
+    componentDidMount(){
+      slider=document.querySelector('.slider');
+      debugger;
       images  =slider.children;
-      
-      slider.firstChild.classList.add('active');
-      slider.firstChild.classList.remove('slide');
+      console.log(images);
+      debugger;
+      slider.firstChild.classList.add('activeSlide');
+      debugger;
+    }
+    render(){
+        return(
+            <div className='sliderMenu'>
+                 <h1>Slider</h1>
+                  <Slider Image={Images}/>
+                  <a href="#" className="SliderArrow" onClick={()=>PrevSlide()}>&larr;</a>   
+                  <a href="#" className="SliderArrow" onClick={()=>NextSlide()}>&rarr;</a> 
+               <div className="switch">
+                  <input type="checkbox"/>
+              </div>
+            </div>
+        
+  
+        )}
   }
+
+  
 
   function NextSlide (){
     LastSlide=ActiveSlide;
@@ -54,10 +63,10 @@
     ChangeSlide(LastSlide,ActiveSlide)
   }
   let ChangeSlide =function(NumberOfLastSlide,NumberOfActiveSlide){
-    images[NumberOfLastSlide].classList.remove('active');
+    images[NumberOfLastSlide].classList.remove('activeSlide');
     images[NumberOfLastSlide].classList.add('slide');
     images[NumberOfActiveSlide].classList.remove('slide');
-    images[NumberOfActiveSlide].classList.add('active');
+    images[NumberOfActiveSlide].classList.add('activeSlide');
     
   }
 

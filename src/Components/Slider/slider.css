@@ -1,18 +1,28 @@
 .slider{
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 600px;
     border:3px solid hotpink;
     border-radius: 10px;
 }
 .slide{
     display:none;
     border-radius: 5px;
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 600px;
 }
-.active{
+.activeSlide{
     display:block;
     border-radius: 5px;
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 600px;
+}
+.SliderArrow{
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+.SliderArrow:hover{
+    color:yellow;
+    transition: all .5s;
 }

@@ -1,12 +1,14 @@
   import React from 'react';
   import './App.css'
   import {Route,BrowserRouter} from 'react-router-dom';
-  import SliderMenu from './Components/Slider/SliderMenu';
   import MainPage from './Components/MainPage/MainPage';
   import Header from './Components/Header/Header';
+  import SliderContainer from './Components/Slider/SliderContainer';
+  import SliderMenu from './Components/Slider/SliderMenu';
+
   
   
-  function App() {
+  function App(props) {
     return (
       <BrowserRouter>
          <div>

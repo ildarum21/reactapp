@@ -1,6 +1,6 @@
   import React from 'react';
   import './slider.css';
-  import { LocalImages } from '../../images/LocalImages';
+  import { Localimages } from '../../images/Localimages';
   import Slider from './Slider';
 
 

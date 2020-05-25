@@ -1,12 +1,10 @@
-import React from 'react';
-import s from './slider.module.css';
+  import React from 'react';
 
-const Slider =(props)=>{
-    return(
-        <div className={s.slider}>
-            <h1>Slider</h1>
-            
-        </div>
-    );
-}
-export default Slider;
+  const Slider =(props)=> {
+      return(
+          <div className="slider">
+              {props.Images}
+          </div>
+      );
+  }
+  export default Slider;

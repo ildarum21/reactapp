@@ -23,5 +23,4 @@
       </BrowserRouter>
     );
   }
-  
   export default App;

@@ -30,8 +30,9 @@
   .arrows{
       display: flex;
       justify-content: space-between;
-}
-.input{
-    cursor: pointer;
-}
+  }
+  .input{
+      font-size: 30px;
+     cursor: pointer;
+  }
 

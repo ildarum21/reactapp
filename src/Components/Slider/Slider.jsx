@@ -43,12 +43,7 @@
       };
 
       onChangeChecked = (e) => {
-        let input =document.querySelector('.input');
-          this.setState((state)=>{
-              return{
-                    isLocal:input.checked
-              }    
-          })
+          this.setState({isLocal:!this.state.isLocal});
           
       };
       render(){

@@ -2,7 +2,7 @@
   import "./slider.css";
   import REDUX from "../../redux";
   import {connect} from "react-redux";
-  import  LocalImages from "../../images/LocalImages";
+  import  LocalImages from "../../images/Localimages";
 
   const mapStateToProps=(state)=>({
       images:state.images

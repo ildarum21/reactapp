@@ -15,12 +15,7 @@
       cursor: pointer;
       font-size: 50px;
   }
-  .SliderArrow:hover{
-      color: red;
-      font-size: 55px;
-      transition: all .3;
-      
-  }
+ 
   .SliderArrow_left{
       float:left;
   }

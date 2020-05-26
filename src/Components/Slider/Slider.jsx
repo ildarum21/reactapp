@@ -3,7 +3,7 @@
   import REDUX from "../../redux";
   import {connect} from "react-redux";
   import  LocalImages from "../../images/Localimages";
-
+  import {NavLink} from 'react-router-dom';
   const mapStateToProps=(state)=>({
       images:state.images
   });
@@ -48,33 +48,36 @@
       };
       render(){
           return(
-              <div className="sliderMenu">
-                  <h1>Slider</h1>
-                  <img
-                      className="image"
-                      src={this.getImages(this.state.count)}
-                      alt=""
-                  />
-                  <div className="arrows">
-                        <div className=" SliderArrow SliderArrow_left" onClick ={()=>{this.prev()}}>
-                              &larr;
+              <div> 
+                   <NavLink  to='/'  >Back</NavLink>  
+                    <div className="sliderMenu">
+                        <h1>Slider</h1>
+                        <img
+                           className="image"
+                           src={this.getImages(this.state.count)}
+                          alt=""
+                        />
+                        <div className="arrows">
+                             <div className=" SliderArrow SliderArrow_left" onClick ={this.prev}>
+                                &larr;
+                             </div>
+
+                             <div className="SliderArrow SliderArrow_right" onClick ={this.next}>
+                                &rarr;
+                             </div>
                         </div>
 
-                         <div className="SliderArrow SliderArrow_right" onClick ={()=>{this.next()}}>
-                             &rarr;
-                         </div>
-                  </div>
-
-                  <div className="switch">
-                      isLocal
-                      <input
-                          checked={this.state.isLocal}
-                          className ='input'
-                          onChange={this.onChangeChecked}
-                          type="checkbox"     
-                      />
-                  </div>
-              </div>
+                        <div className="switch">
+                             isLocal
+                             <input
+                                checked={this.state.isLocal}
+                                className ='input'
+                                onChange={this.onChangeChecked}
+                                type="checkbox"     
+                             />
+                        </div>
+                    </div>
+              </div>  
           )
 
       }
